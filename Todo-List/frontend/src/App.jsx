@@ -19,7 +19,7 @@ const App = () => {
   const fetchTasks = async () => {
     try {
       const res = await axios.get(
-        "https://todo-list-backend-wyij.onrender.com/api/tasks"
+        "https://todo-list-backend-a2gm.onrender.com/api/tasks"
       );
       setTasks(res.data);
     } catch (err) {
@@ -32,7 +32,7 @@ const App = () => {
     try {
       if (editingTask) {
         const res = await axios.put(
-          `https://todo-list-backend-wyij.onrender.com/api/tasks/task/${editingTask._id}`,
+          `https://todo-list-backend-a2gm.onrender.com/api/tasks/task/${editingTask._id}`,
           taskData
         );
         const arr = tasks.map((task) =>
@@ -42,7 +42,7 @@ const App = () => {
         setEditingTask("");
       } else {
         const res = await axios.post(
-          "https://todo-list-backend-wyij.onrender.com/api/tasks/task",
+          "https://todo-list-backend-a2gm.onrender.com/api/tasks/task",
           taskData
         );
         setTasks([...tasks, res.data]);
@@ -61,7 +61,7 @@ const App = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://todo-list-backend-wyij.onrender.com/api/tasks/${id}`
+        `https://todo-list-backend-a2gm.onrender.com/api/tasks/${id}`
       );
       const arr = tasks.filter((item) => item._id !== id);
       setTasks(arr);
