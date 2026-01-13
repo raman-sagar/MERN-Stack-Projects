@@ -34,7 +34,7 @@ const fetchData = async (search = "", page = 1) => {
       const tr = document.createElement("tr");
       tr.innerHTML = "";
       tr.innerHTML = `
-    <td><img width="50px" height="50px" style="border-radius:50%" src="http://localhost:3000/public/${item.profile_pic}"/></td>
+    <td><img width="50px" height="50px" style="border-radius:50%" src="https://studentrecords-ula6.onrender.com/public/${item.profile_pic}"/></td>
     <td>${item.first_name}</td>
     <td>${item.last_name}</td>
     <td>${item.email}</td>
