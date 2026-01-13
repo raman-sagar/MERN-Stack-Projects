@@ -10,13 +10,12 @@ import helmet from "helmet";
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use(express.static("public"));
 app.use("/public", express.static(path.join(import.meta.dirname, "public")));
 mongoDB();
 
 app.use(cors());
 //Routes
-//app.use(helmet()); Don't use on local system
+app.use(helmet()); //Don't use on local system
 app.use(limiter);
 app.use("/api/users", router);
 app.use(auth);
