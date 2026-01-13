@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/api/students";
+const API = "https://studentrecords-ula6.onrender.com/api/students";
 var currentPage = 1;
 var currentSearch = "";
 
@@ -102,7 +102,7 @@ async function viewStudent(id) {
   console.log(student);
   document.querySelector(
     "#viewProfilePic"
-  ).src = `http://localhost:3000/public/${student.profile_pic}`;
+  ).src = `https://studentrecords-ula6.onrender.com/public/${student.profile_pic}`;
   document.querySelector(
     "#viewName"
   ).textContent = `${student.first_name} ${student.last_name}`;

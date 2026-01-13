@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/users";
+const API_URL = "https://studentrecords-ula6.onrender.com/api/users";
 
 const loginForm = document.getElementById("loginForm");
 const registerForm = document.getElementById("registerForm");
