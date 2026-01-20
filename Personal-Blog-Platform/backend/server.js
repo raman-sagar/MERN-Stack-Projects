@@ -23,7 +23,7 @@ app.use("/public", express.static(path.join(import.meta.dirname, "public")));
 app.get("/", (req, res) => {
   res.send("<h3>Backend Server is running</h3>");
 });
-// app.use(helmet())
+app.use(helmet())
 app.use(compression({ level: 4, threshold: 1024 * 1024 * 5 }));
 const limiter = rateLimit({
   windowMs: 1000 * 60,

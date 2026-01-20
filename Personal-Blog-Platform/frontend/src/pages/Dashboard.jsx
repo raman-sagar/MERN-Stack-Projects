@@ -5,7 +5,7 @@ import PostList from "./PostList";
 import { postsAPI } from "../services/api";
 import { toast } from "react-toastify";
 
-export default function Dashboard({ user, setUser }) {
+export default function Dashboard({ setUser }) {
   const [posts, setPosts] = useState([]);
   const [editingPost, setEditingPost] = useState(null);
   const [activeTab, setActiveTab] = useState("create");

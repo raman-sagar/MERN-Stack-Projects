@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { postsAPI } from "../services/api";
-const imgURL = "http://localhost:5000/public/";
+const imgURL = "https://pbp-backend-sgys.onrender.com/public/";
 
 export default function PostList({ posts = [], onEdit, onDelete }) {
   const [publicPosts, setPublicPosts] = useState([]);
