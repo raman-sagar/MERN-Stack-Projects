@@ -26,29 +26,29 @@ function App() {
         <div className="min-h-screen bg-linear-to-br from-pink-200 to-emerald-200">
           <Routes>
             <Route
-              path="https://pbp-frontend-t291.onrender.com/login"
+              path="/login"
               element={
                 !user ? (
                   <Login setUser={setUser} />
                 ) : (
-                  <Navigate to="https://pbp-frontend-t291.onrender.com/dashboard" />
+                  <Navigate to="/dashboard" />
                 )
               }
             />
             <Route
-              path="https://pbp-frontend-t291.onrender.com/register"
-              element={!user ? <Register /> : <Navigate to="https://pbp-frontend-t291.onrender.com/dashboard" />}
+              path="/register"
+              element={!user ? <Register /> : <Navigate to="/dashboard" />}
             />
-            <Route path="https://pbp-frontend-t291.onrender.com/posts" element={<PostList />} />
+            <Route path="/posts" element={<PostList />} />
             <Route
-              path="https://pbp-frontend-t291.onrender.com/dashboard"
+              path="/dashboard"
               element={
                 <ProtectedRoute user={user}>
                   <Dashboard setUser={setUser} />
                 </ProtectedRoute>
               }
             />
-            <Route path="https://pbp-frontend-t291.onrender.com/" element={<Navigate to="https://pbp-frontend-t291.onrender.com/posts" />} />
+            <Route path="/" element={<Navigate to="/posts" />} />
           </Routes>
         </div>
       </Router>
